@@ -17,51 +17,53 @@
         {% block script %}
         {% endblock %}
     </head>
-
-    <body>
-    {# Side Navigation Bar #}
-        <nav class="navbar navbar-side navbar-expand-sm navbar-dark flex-column">
-            <h1 style="color:white">BFS Intranet</h1>
-            <ul class="nav  flex-column">
-                <li class="nav-item btn btn-dark">
-                    <a href="#">
-                        Shipping</a>
-                </li>
-                <li class="nav-item btn btn-dark">
-                    <a href="#">
-                        Receiving</a>
-                </li>
-                <li class="nav-item btn btn-dark">
-                    <a href="#">
-                        Security</a>
-                </li>
-                <li class="nav-item btn btn-dark">
-                    <a href="#">
-                        Sanitation</a>
-                </li>
-                <li class="nav-item btn btn-dark">
-                    <a href="#">
-                        Maintenance</a>
-                </li>
-                <li class="nav-item btn btn-dark">
-                    <a href="#">
-                        Customer Service</a>
-                </li>
-            </ul>
-        </nav>
-    {# End Side Navigation Bar #}
     {# Start Top Navigation Bar #}
-        {% block topnav %}
-            <nav id="top-bar" class="navbar navbar-top navbar-expand-sm navbar-dark flex-row">
+    {% block topnav %}
+        <nav id="top-bar" class="navbar navbar-top navbar-expand-sm navbar-dark flex-row">
 
-            </nav>
-        {% endblock %}
+        </nav>
+    {% endblock %}
     {# End Top Navigation Bar #}
+    {# Side Navigation Bar #}
+    <nav class="navbar navbar-side navbar-expand-sm navbar-dark flex-column">
+        <h1 style="color:white">BFS Intranet</h1>
+        <ul class="nav  flex-column">
+            <li class="nav-item btn btn-dark">
+                <a href="{{ path('app_shipping') }}">
+                    Shipping</a>
+            </li>
+            <li class="nav-item btn btn-dark">
+                <a href="{{ path('app_receiving') }}">
+                    Receiving</a>
+            </li>
+            <li class="nav-item btn btn-dark">
+                <a href="{{ path('app_security') }}">
+                    Security</a>
+            </li>
+            <li class="nav-item btn btn-dark">
+                <a href="#">
+                    Sanitation</a>
+            </li>
+            <li class="nav-item btn btn-dark">
+                <a href="#">
+                    Maintenance</a>
+            </li>
+            <li class="nav-item btn btn-dark">
+                <a href="{{ path('app_customer_service') }}">
+                    Customer Service</a>
+            </li>
+            <li class="nav-item btn btn-dark">
+                <a href="#">
+                    Christopher Fissler</a>
+            </li>
+        </ul>
+    </nav>
+    {# End Side Navigation Bar #}
+    <body>
     {# Body Block #}
-    <body style="margin-top: 70px; margin-left: 275px">
-        {% block body %}
-        {% endblock %}
-    </body>
+    {% block body %}
+    {% endblock %}
     {# End Body Block #}
     </body>
+
 </html>

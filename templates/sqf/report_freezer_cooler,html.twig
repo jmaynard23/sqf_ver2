@@ -1,0 +1,70 @@
+{% extends 'sqf/security.html.twig' %}
+
+{% block title %}Freezer/Cooler Report{% endblock %}
+
+{% block body %}
+
+    <div style="visibility: hidden">
+        <span>hidden</span>
+    </div>
+
+    <div>
+        <div class="buffer button_div">
+            <form>
+                <ul>
+                    <li>
+                        <div class="form-group">
+                            <input class="standard_size" type="date">
+                        </div>
+                    </li>
+                    <li>
+                        <div class="form-group">
+                            <select class="form-control standard_size" >
+                                <option>Day</option>
+                                <option>Week</option>
+                                <option>Month</option>
+                                <option>Quarter</option>
+                                <option>Year</option>
+                                <option>Custom...</option>
+                            </select>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="#" class="btn btn-dark button_dark standard_size">Print</a>
+                    </li>
+                </ul>
+            </form>
+        </div>
+        <div class="shipping_table">
+            <table class="table table-dark table-bordered table-striped">
+                <thead>
+                <tr>
+                    <td>Date:</td>
+                    <td>Area:</td>
+                    <td>Scheduled:</td>
+                    <td>Checked:</td>
+                    <td>Temperature</td>
+                    <td>Tolerance:</td>
+                    <td>Checked By:</td>
+                    <td>Scanned:</td>
+                </tr>
+                </thead>
+                <tbody>
+                {% for cooler in coolers %}
+                    <tr>
+                        <td>{{ cooler.date }}</td>
+                        <td>{{ cooler.area }}</td>
+                        <td>{{ cooler.scheduled }}</td>
+                        <td>{{ cooler.checked_time }}</td>
+                        <td>{{ cooler.temperature }}</td>
+                        <td>{{ cooler.tolerance }}</td>
+                        <td>{{ cooler.checked_by }}</td>
+                        <td>{{ cooler.scanned }}</td>
+                    </tr>
+                {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+{% endblock %}

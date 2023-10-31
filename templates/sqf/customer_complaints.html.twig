@@ -1,0 +1,41 @@
+{% extends 'sqf/customer_service.html.twig' %}
+
+{% block title %}Customer Complaints{% endblock %}
+
+{% block body %}
+    {#    == Header and Date Time Selector ==#}
+    <div class="main_body">
+        <div>
+            <span style="color: white">HELLO WORLD</span>
+        </div>
+    </div>
+    {#        == Table ==#}
+            <table style="margin-left: 275px; margin-top: 50px" class="table table-dark table-bordered table-striped">
+                <thead>
+                <tr>
+                    <th>Date:</th>
+                    <th>Time:</th>
+                    <th>Customer:</th>
+                    <th>Phone:</th>
+                    <th>Email:</th>
+                    <th>Product:</th>
+                    <th>Date Purchased:</th>
+                    <th>Category:</th>
+                </tr>
+                </thead>
+                <tbody>
+                {% for complaint in complaints %}
+                    <tr>
+                        <td>not available</td>
+                        <td>not available</td>
+                        <td>{{ complaint.getAccountName }}</td>
+                        <td>{{ complaint.getPhone  }}</td>
+                        <td>{{ complaint.getAccountEmail }}</td>
+                        <td>{{ complaint.getProductId }}</td>
+                        <td>not available</td>
+                        <td>{{ complaint.getComplaintCategoryId }}</td>
+                    </tr>
+                {% endfor %}
+                </tbody>
+            </table>
+{% endblock %}

@@ -1,0 +1,43 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Security{% endblock %}
+
+    {% block topnav %}
+
+        <nav id="top-bar" class="navbar navbar-top flex-row">
+                <ul>
+                    <li class="nav-item btn btn-lg btn-dark">
+                        <a href="{{ path('app_temperature_log_freezer_cooler') }}">
+                            <span>F/C Temp. Walk</span>
+                        </a>
+                    </li>
+                    <li class="nav-item btn btn-lg btn-dark">
+                        <a href="{{ path('app_security_walk') }}">
+                            <span>Security Walk</span>
+                        </a>
+                    </li>
+                    <li class="nav-item btn btn-lg btn-dark">
+                        <a href="{{ path('app_pest_control_walk') }}">
+                            <span>Pest Control Walk</span>
+                        </a>
+                    </li>
+{#                    <li class="nav-item btn btn-lg btn-dark">#}
+{#                        <a href="{{ path('app_visitor_checkin') }}">#}
+{#                            <span>Visitor Check-In</span>#}
+{#                        </a>#}
+{#                    </li>#}
+                    <li class="nav-item btn btn-lg btn-dark">
+                        <a href="{{ path('app_security_seal_log') }}">
+                            <span>Security Seal Log</span>
+                        </a>
+                    </li>
+                </ul>
+        </nav>
+
+    {% endblock %}
+
+{% block body %}
+
+
+
+{% endblock %}

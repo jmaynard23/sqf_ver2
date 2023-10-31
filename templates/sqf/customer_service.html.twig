@@ -1,0 +1,25 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Customer Service{% endblock %}
+
+    {% block topnav %}
+
+        <nav id="top-bar" class="navbar navbar-top flex-row">
+            <div>
+                <ul>
+                    <li class="nav-item btn btn-lg btn-dark">
+                        <a id="customer-complaint-log" href="{{ path('app_customer_complaints') }}">
+                            <span>Complaints</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+    {% endblock %}
+
+{% block body %}
+
+
+
+{% endblock %}

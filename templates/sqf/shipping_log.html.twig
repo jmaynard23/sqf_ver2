@@ -1,0 +1,58 @@
+{% extends 'sqf/shipping.html.twig' %}
+
+{% block title %}Shipping Log{% endblock %}
+
+{% block body %}
+    <div style="visibility: hidden; margin-bottom: 45px"><span>Gimmlet</span></div>
+
+    <table style="margin-left: 275px; margin-right: 50px" class="table table-dark table-bordered table-striped">
+        <thead>
+        <tr>
+            <th>Run:</th>
+            <th>Truck:</th>
+            <th>Trailer:</th>
+            <th>Door:</th>
+            <th>Equipment:</th>
+            <th>Samples:</th>
+            <th>Straps:</th>
+            <th>Pallet Jack:</th>
+            <th>3rd Evap:</th>
+            <th>Blanket Cooler:</th>
+            <th>Time Loaded:</th>
+            <th>Loader:</th>
+            <th>Frozen Reading:</th>
+            <th>Refrigerated Reading:</th>
+            <th>Trailer Condition:</th>
+        </tr>
+        </thead>
+
+        <tbody>
+        {% for shippinglog in shippinglogs %}
+            <tr>
+                <td>{{ shippinglog.getRoute }}</td>
+                <td>{{ shippinglog.getTruck }}</td>
+                <td>{{ shippinglog.getTrailer }}</td>
+                <td>{{ shippinglog.getDock }}</td>
+                <td>{{ shippinglog.getEquipQty }}</td>
+                <td>{{ shippinglog.getSampleQty }}</td>
+                <td>{{ shippinglog.getStrapsQty }}</td>
+                <td>{{ shippinglog.getPalletJackId }}</td>
+                <td>{{ shippinglog.getThirdEvap }}</td>
+                <td>{{ shippinglog.getBlanketCooler }}</td>
+                <td>{{ shippinglog.getTimeLoaded }}</td>
+                <td>{{ shippinglog.getLoader }}</td>
+                <td>{{ shippinglog.getZone1Temp }}</td>
+                <td>{{ shippinglog.getZone2Temp }}</td>
+                <td>
+                    {% if shippinglog.getTrailerCondition == 1 %}
+                        Acceptable
+                    {% endif %}
+                    {% if shippinglog.getTrailerCondition != 1%}
+                        Not Acceptable
+                    {% endif %}
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+{% endblock %}

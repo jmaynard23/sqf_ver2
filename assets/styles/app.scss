@@ -9,7 +9,7 @@ body {
   position: fixed;
   height: 100%;
   width:  275px;
-  padding: 60px;
+  padding: 20px;
 
   display: flex;
   flex-direction: column;
@@ -43,11 +43,31 @@ body {
 }
 /*Top Navigation Bar*/
 .navbar-top{
-  position: fixed;
+  position: absolute;
   height: 70px;
   width: 100%;
   margin-left: 275px;
 
+  background: #212529;
+}
+/*Top Navigation Bar Formatting*/
+.navbar-top li{
+  height: 50px;
+  width: 200px;
+  margin-top: 10px;
+  padding: 10px;
+
+  list-style: none;
+  align-items: center;
+
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.navbar-top a{
   display: flex;
-  flex-direction: row;
+
+  align-items: center;
+  text-decoration: none;
+  color: white;
 }

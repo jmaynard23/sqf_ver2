@@ -1,0 +1,66 @@
+{% extends 'sqf/security.html.twig' %}
+
+{% block title %}Security Seal Log{% endblock %}
+
+{% block body %}
+
+    <div style="visibility: hidden">
+        <span>hidden</span>
+    </div>
+
+    <div>
+        <div class="buffer button_div">
+            <form>
+                <ul>
+                    <li>
+                        <div class="form-group">
+                            <input class="standard_size" type="date">
+                        </div>
+                    </li>
+                    <li>
+                        <div class="form-group">
+                            <select class="form-control standard_size" >
+                                <option>Day</option>
+                                <option>Week</option>
+                                <option>Month</option>
+                                <option>Quarter</option>
+                                <option>Year</option>
+                                <option>Custom...</option>
+                            </select>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="#" class="btn btn-dark button_dark standard_size">Print</a>
+                    </li>
+                </ul>
+            </form>
+        </div>
+        <div class="shipping_table">
+            <table class="table table-dark table-bordered table-striped">
+                <thead>
+                <tr>
+                    <td>Ship Date:</td>
+                    <td>Truck:</td>
+                    <td>Trailer:</td>
+                    <td>Run:</td>
+                    <td>Driver:</td>
+                    <td>Time Loaded:</td>
+                </tr>
+                </thead>
+                <tbody>
+                {% for route in routes %}
+                    <tr>
+                        <td>{{ route.date }}</td>
+                        <td>{{ route.truck }}</td>
+                        <td>{{ route.trailer }}</td>
+                        <td>{{ route.route }}</td>
+                        <td>{{ route.driver }}</td>
+                        <td>{{ route.time_loaded }}</td>
+                    </tr>
+                {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+{% endblock %}

@@ -1,0 +1,24 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Receiving{% endblock %}
+
+{% block topnav %}
+        <nav id="top-bar" class="navbar navbar-top flex-row">
+                <ul>
+                    <li class="nav-item btn btn-lg btn-dark">
+                        <a href="{{ path('app_inbound_freight_log') }}">
+                            <span>Inbound Freight</span>
+                        </a>
+                    </li>
+                    <li class="nav-item btn btn-lg btn-dark">
+                        <a href="{{ path('app_inbound_trailer_temp_log') }}">
+                            <span>Rec. Temp. Log</span>
+                        </a>
+                    </li>
+                </ul>
+        </nav>
+    {% endblock %}
+
+{% block body %}
+
+{% endblock %}

@@ -1,0 +1,79 @@
+{% extends 'sqf/shipping.html.twig' %}
+
+{% block title %}Outbound Temp Log{% endblock %}
+
+{% block body %}
+    <div style="visibility: hidden">
+        <span>hidden</span>
+    </div>
+
+    {#    == Table ==#}
+{#        <div class="buffer button_div">#}
+{#            <form>#}
+{#                <ul>#}
+{#                    <li>#}
+{#                        <div class="form-group">#}
+{#                            <input class="standard_size" type="date">#}
+{#                        </div>#}
+{#                    </li>#}
+{#                    <li>#}
+{#                        <div class="form-group">#}
+{#                            <select class="form-control standard_size" >#}
+{#                                <option>Day</option>#}
+{#                                <option>Week</option>#}
+{#                                <option>Month</option>#}
+{#                                <option>Quarter</option>#}
+{#                                <option>Year</option>#}
+{#                                <option>Custom...</option>#}
+{#                            </select>#}
+{#                        </div>#}
+{#                    </li>#}
+{#                    <li>#}
+{#                        <a href="#" class="btn btn-dark button_dark standard_size">Print</a>#}
+{#                    </li>#}
+{#                </ul>#}
+{#            </form>#}
+{#        </div>#}
+
+            <table style="margin-left: 275px; margin-right: 50px" class="table table-dark table-bordered table-striped">
+                <thead>
+                <tr>
+                    <th>Date:</th>
+                    <th>Trailer:</th>
+                    <th>Route:</th>
+                    <th>Time:</th>
+                    <th>Zone 1:</th>
+                    <th>Zone 2:</th>
+                    <th>Zone 3:</th>
+                </tr>
+                </thead>
+                <tbody>
+                {% for trailertemplog in trailertemplogs %}
+                    <tr>
+                        <td>{{ trailertemplog.getEffectiveDt }}</td>
+                        <td>{{ trailertemplog.getTrailerId }}</td>
+                        <td>{{ trailertemplog.getRouteId }}</td>
+                        <td><input class="form-control" type="time" name="time-checked" value="{{ trailertemplog.getCreateStamp }}"></td>
+                        <td><select>
+                                <option value="0">Acceptable</option>
+                                <option value="1">Unacceptable</option>
+                                <option value="2">N/A</option>
+                            </select></td>
+                        <td><select>
+                                <option value="0">Acceptable</option>
+                                <option value="1">Unacceptable</option>
+                                <option value="2">N/A</option>
+                            </select></td>
+                        <td><select>
+                                <option value="0">Acceptable</option>
+                                <option value="1">Unacceptable</option>
+                                <option value="2">N/A</option>
+                            </select></td>
+                    </tr>
+                {% endfor %}
+                </tbody>
+            </table>
+
+
+
+{% endblock %}

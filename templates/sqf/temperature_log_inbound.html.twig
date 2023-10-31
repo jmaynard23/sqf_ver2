@@ -1,0 +1,78 @@
+{% extends 'sqf/receiving.html.twig' %}
+
+{% block title %}Inbound Temp Log{% endblock %}
+
+{% block body %}
+    <div style="visibility: hidden">
+        <span>hidden</span>
+    </div>
+
+    {#    === Table ===#}
+
+{#            <form>#}
+{#                <ul>#}
+{#                    <li>#}
+{#                        <div class="form-group">#}
+{#                            <input class="standard_size" type="date">#}
+{#                        </div>#}
+{#                    </li>#}
+{#                    <li>#}
+{#                        <div class="form-group">#}
+{#                            <select class="form-control standard_size" >#}
+{#                                <option>Day</option>#}
+{#                                <option>Week</option>#}
+{#                                <option>Month</option>#}
+{#                                <option>Quarter</option>#}
+{#                                <option>Year</option>#}
+{#                                <option>Custom...</option>#}
+{#                            </select>#}
+{#                        </div>#}
+{#                    </li>#}
+{#                    <li>#}
+{#                        <a href="https://sqf.brownfoodservice.loc/Reports/printReceivingLog" class="btn btn-dark button_dark standard_size">Print</a>#}
+{#                    </li>#}
+{#                </ul>#}
+{#            </form>#}
+
+
+            <table style="margin-left: 275px; margin-top: 50px" class="table table-dark table-bordered table-striped">
+                <thead>
+                <tr>
+                    <td>Date:</td>
+                    <td>Time:</td>
+                    <td>Purchase Order:</td>
+                    <td>Load Type:</td>
+                    <td>Company:</td>
+                    <td>Product:</td>
+                    <td>Zone:</td>
+                    <td>Back Temp:</td>
+                    <td>Middle Temp:</td>
+                    <td>Front Temp:</td>
+                    <td>Dock:</td>
+                    <td>Initials:</td>
+                    <td>ITL Inspection:</td>
+                </tr>
+                </thead>
+                <tbody>
+                {% for receivingtemp in receivingtemps %}
+                    <tr>
+                        <td>{{ receivingtemp.getCheckStamp|date('Y-m-d') }}</td>
+                        <td>{{ receivingtemp.getCheckStamp|date('H:i:s')}}</td>
+                        <td>{{ receivingtemp.getPurchaseOrder }}</td>
+                        <td>{{ receivingtemp.getLoadType }}</td>
+                        <td>{{ receivingtemp.getCompany }}</td>
+                        <td>{{ receivingtemp.getProduct }}</td>
+                        <td>{{ receivingtemp.getTempType }}</td>
+                        <td>{{ receivingtemp.getBack }}</td>
+                        <td>{{ receivingtemp.getMiddle }}</td>
+                        <td>{{ receivingtemp.getFront }}</td>
+                        <td>{{ receivingtemp.getDockDoor }}</td>
+                        <td>{{ receivingtemp.getInspBy }}</td>
+                        <td>{{ receivingtemp.getTrailerLightInspection }}</td>
+                    </tr>
+                {% endfor %}
+                </tbody>
+            </table>
+
+
+{% endblock %}

@@ -1,0 +1,25 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Shipping{% endblock %}
+
+    {% block topnav %}
+        <nav id="top-bar" class="navbar navbar-top flex-row">
+            <ul>
+                <li class="nav-item btn btn-lg btn-dark">
+                    <a id="shipping-log" href="{{ path('app_shipping_log') }}">
+                        <span>Shipping Log</span>
+                    </a>
+                </li>
+                <li class="nav-item btn btn-dark btn-lg">
+                    <a id="outbound-trailer-temp-log" href="{{ path('app_outbound_trailer_temp_log') }}">
+                        <span>Outbound Temp.</span>
+                    </a>
+                </li>
+                <li class="nav-item btn btn-lg btn-dark">
+                    <a id="daily-run" href="#">
+                        <span>Daily Run</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    {% endblock %}

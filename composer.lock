@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "54676031adccfcaf340f653429fa97f2",
+    "content-hash": "919ea32f8f2b7ce8195e37c78dedd3ee",
     "packages": [
         {
             "name": "doctrine/cache",
@@ -1322,16 +1322,16 @@
         },
         {
             "name": "easycorp/easyadmin-bundle",
-            "version": "v4.8.0",
+            "version": "v4.8.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/EasyCorp/EasyAdminBundle.git",
-                "reference": "15883641d9530e83a1a487d68314b2648e56f224"
+                "reference": "f9e50a3bdcee3194d332525e52d3c064eb5cf1c0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/EasyCorp/EasyAdminBundle/zipball/15883641d9530e83a1a487d68314b2648e56f224",
-                "reference": "15883641d9530e83a1a487d68314b2648e56f224",
+                "url": "https://api.github.com/repos/EasyCorp/EasyAdminBundle/zipball/f9e50a3bdcee3194d332525e52d3c064eb5cf1c0",
+                "reference": "f9e50a3bdcee3194d332525e52d3c064eb5cf1c0",
                 "shasum": ""
             },
             "require": {
@@ -1404,7 +1404,7 @@
             ],
             "support": {
                 "issues": "https://github.com/EasyCorp/EasyAdminBundle/issues",
-                "source": "https://github.com/EasyCorp/EasyAdminBundle/tree/v4.8.0"
+                "source": "https://github.com/EasyCorp/EasyAdminBundle/tree/v4.8.3"
             },
             "funding": [
                 {
@@ -1412,7 +1412,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2023-10-21T10:59:52+00:00"
+            "time": "2023-10-29T19:21:38+00:00"
         },
         {
             "name": "psr/cache",

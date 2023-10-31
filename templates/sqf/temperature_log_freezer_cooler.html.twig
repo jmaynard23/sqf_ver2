@@ -1,0 +1,34 @@
+{% extends 'sqf/security.html.twig' %}
+
+{% block title %}Freezer Cooler Temp{% endblock %}
+
+{% block body %}
+
+    <div style="visibility: hidden">
+        <span>hidden</span>
+    </div>
+
+
+
+    <div style="margin-left: 275px; margin-top: 50px">
+        <div class="button_div" >
+            <a href="#" class="button_dark btn btn-dark">Load Checkpoints</a>
+            <a href="#" class="button_dark btn btn-dark">Finish Walk</a>
+            <a href="{{ path('app_report_freezer_cooler') }}" class="button_dark btn btn-dark">Log</a>
+        </div>
+        <div class="shipping_table">
+            <table class="table table-dark table-bordered table-striped">
+                <thead>
+                <tr>
+                    <td>Status:</td>
+                    <td>Date:</td>
+                    <td>Area:</td>
+                    <td>Checkpoint:</td>
+                    <td>Time Checked:</td>
+                </tr>
+                </thead>
+            </table>
+        </div>
+    </div>
+
+{% endblock %}
