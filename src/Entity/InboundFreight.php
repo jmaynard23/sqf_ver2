@@ -80,7 +80,7 @@ class InboundFreight
 
     public function getId(): ?int
     {
-        return $this->id;
+        return $this->_id;
     }
 
     public function setId(string $_id): self

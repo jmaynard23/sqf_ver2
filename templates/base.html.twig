@@ -3,7 +3,6 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
         <title>{% block title %}Welcome!{% endblock %}</title>
 
         {% block stylesheets %}
@@ -53,8 +52,8 @@
                     Customer Service</a>
             </li>
             <li class="nav-item btn btn-dark">
-                <a href="#">
-                    Christopher Fissler</a>
+                <a href="{{ path('app_user_profile') }}">
+                    Jesse Maynard</a>
             </li>
         </ul>
     </nav>

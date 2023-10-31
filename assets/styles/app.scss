@@ -1,14 +1,13 @@
-@import "custom";
 @import "~bootstrap/scss/bootstrap";
 
 body {
-  background-color: #373B3E;
+  background-color: #2C3034;
 }
 /*Main Navigation Bar*/
 .navbar-side{
   position: fixed;
   height: 100%;
-  width:  275px;
+  width:  280px;
   padding: 20px;
 
   display: flex;
@@ -38,7 +37,7 @@ body {
   display: flex;
 
   align-items: center;
-  text-decoration: none;
+  text-decoration:none;
   color: white;
 }
 /*Top Navigation Bar*/
@@ -70,4 +69,18 @@ body {
   align-items: center;
   text-decoration: none;
   color: white;
+}
+
+.button-header{
+  margin-left: 275px;
+  margin-top: 50px;
+}
+
+.button-header li{
+  padding: 10px;
+}
+
+.buffer{
+  margin-left: 280px;
+  margin-top: 50px;
 }

@@ -4,8 +4,35 @@
 
 {% block body %}
     <div style="visibility: hidden; margin-bottom: 45px"><span>Gimmlet</span></div>
-
-    <table style="margin-left: 275px; margin-right: 50px" class="table table-dark table-bordered table-striped">
+    {#Header Containing Date/Time Selector Print Report Button#}
+    <div class="button-header">
+        <form>
+            <ul style="list-style: none">
+                <li>
+                    <div class="form-group">
+                        <input class="standard_size" type="date">
+                    </div>
+                </li>
+                <li style="width: 140px">
+                    <div class="form-group">
+                        <select class="form-control standard_size" >
+                            <option>Day</option>
+                            <option>Week</option>
+                            <option>Month</option>
+                            <option>Quarter</option>
+                            <option>Year</option>
+                            <option>Custom...</option>
+                        </select>
+                    </div>
+                </li>
+                <li>
+                    <a href="https://sqf.brownfoodservice.loc/Reports/printShippingLog" class="btn btn-lg btn-primary" target="_blank">Print</a>
+                </li>
+            </ul>
+        </form>
+    </div>
+    {#Table Listing Shipping Logs#}
+    <table style="margin-left: 280px; margin-right: 50px" class="table table-dark table-bordered table-striped">
         <thead>
         <tr>
             <th>Run:</th>

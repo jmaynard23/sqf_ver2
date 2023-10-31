@@ -2,6 +2,9 @@
 
 namespace App\Controller\Admin;
 
+use App\Entity\Complaint;
+use App\Entity\InboundFreight;
+use App\Entity\ShippingLog;
 use EasyCorp\Bundle\EasyAdminBundle\Config\Dashboard;
 use EasyCorp\Bundle\EasyAdminBundle\Config\MenuItem;
 use EasyCorp\Bundle\EasyAdminBundle\Controller\AbstractDashboardController;
@@ -31,7 +34,9 @@ class DashboardController extends AbstractDashboardController
     public function configureMenuItems(): iterable
     {
         //yield MenuItem::linkToDashboard('Dashboard', 'fa fa-home');
-        // yield MenuItem::linkToCrud('The Label', 'fas fa-list', EntityClass::class);
+        yield MenuItem::linkToCrud('Complaints', 'fas fa-message', Complaint::class);
+        yield MenuItem::linkToCrud('Shipping Logs', 'fas fa-ship', ShippingLog::class);
+        yield MenuItem::linkToCrud('Inbound Freight', 'fas fa-truck', InboundFreight::class);
         yield MenuItem::linkToRoute('Back to Website', 'fas fa-home', 'app_shipping');
     }
 }

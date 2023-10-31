@@ -137,7 +137,7 @@ class ShippingLog
 
     public function getId(): ?int
     {
-        return $this->id;
+        return $this->_id;
     }
 
     public function setId(int $_id): self
@@ -159,7 +159,7 @@ class ShippingLog
         return $this;
     }
 
-    public function getShipDt(): ?string
+    public function getShipDt()
     {
         return $this->ship_dt;
     }
