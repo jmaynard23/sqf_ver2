@@ -1,0 +1,96 @@
+{% extends 'sqf/customer_service.html.twig' %}
+
+{% block body %}
+
+    <div style="visibility: hidden"><span>Hidden</span></div>
+<div class="buffer">
+    <h1 id="form-test" class="buffer">Testing Forms</h1>
+{#Complaint form#}
+<div class="complaint-form" style="color: white; margin-left: 50px" class="row">
+    <div class="row">
+        <div class="row">
+            <div class="col-2">
+                <input
+                        name="{{ field_name(form.account_number) }}"
+                        value="{{ field_value(form.account_number) }}"
+                        placeholder="{{ field_label(form.account_number) }}"
+                        class="form-control"
+                >
+            </div>
+
+            <div class="col-lg-5">
+                <input
+                        name="{{ field_name(form.account_name) }}"
+                        value="{{ field_value(form.account_name) }}"
+                        placeholder="{{ field_label(form.account_name) }}"
+                        class="form-control"
+                >
+            </div>
+            <div class="col-lg-4">
+                <select id="category"
+                        name="{{ field_name(form.complaint_tier_id) }}"
+                        class="form-control">
+                    <option name="first-option" value="1">Food Safety</option>
+                    <option value="2">Quality</option>
+                    <option value="3">Non-Food Related</option>
+                </select>
+
+
+                <select>
+
+
+                    {% for  %}
+
+                    {% endfor %}
+
+
+                </select>
+
+
+
+
+
+
+            </div>
+        </div>
+
+
+    </div>
+
+    <div class="row">
+        <div class="col-lg-7">
+            <input
+                name="{{ field_name(form.address) }}"
+                value="{{ field_value(form.address) }}"
+                placeholder="Account Address"
+                class="form-control"
+            >
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-7">
+            <input
+                name="{{ field_name(form.contact_name) }}"
+                value="{{ field_value(form.contact_name) }}"
+                placeholder="Contact Name"
+                class="form-control"
+            >
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-7">
+            <input
+                    name="{{ field_name(form.account_email) }}"
+                    value="{{ field_value(form.account_email) }}"
+                    placeholder="Customer Email"
+                    class="form-control"
+            >
+        </div>
+    </div>
+
+
+</div>
+
+{% endblock %}

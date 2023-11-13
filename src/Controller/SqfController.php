@@ -16,9 +16,5 @@ class SqfController extends AbstractController
         ]);
     }
 
-    #[Route('/receiving', name: 'app_receiving')]
-    public function receiving(): Response
-    {
-        return $this->render('sqf/receiving.html.twig');
-    }
+
 }

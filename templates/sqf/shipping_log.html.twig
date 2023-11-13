@@ -66,7 +66,7 @@
                 <td>{{ shippinglog.getPalletJackId }}</td>
                 <td>{{ shippinglog.getThirdEvap }}</td>
                 <td>{{ shippinglog.getBlanketCooler }}</td>
-                <td>{{ shippinglog.getTimeLoaded }}</td>
+                <td>{{ shippinglog.getTimeLoaded|date('H:i')}}</td>
                 <td>{{ shippinglog.getLoader }}</td>
                 <td>{{ shippinglog.getZone1Temp }}</td>
                 <td>{{ shippinglog.getZone2Temp }}</td>

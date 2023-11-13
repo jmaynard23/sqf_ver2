@@ -11,8 +11,13 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 
 class ReceivingController extends AbstractController
 {
-    // Receiving -> Inbound Visitor Log
 
+    #[Route('/receiving', name: 'app_receiving')]
+    public function receiving(): Response
+    {
+        return $this->render('sqf/receiving.html.twig');
+    }
+    // Receiving -> Inbound Visitor Log
     #[Route('/freight-log/inbound', name: 'app_inbound_freight_log')]
     public function inboundVisitorLog(EntityManagerInterface $entityManager): Response
     {
@@ -21,7 +26,7 @@ class ReceivingController extends AbstractController
 
         return $this->render('sqf/freight_log_inbound.html.twig',['inboundfreights' => $inboundFreights]);
     }
-//    // Receiving -> Inbound Trailer Temp Log
+   // Receiving -> Inbound Trailer Temp Log
     #[Route('/temperature-log/inbound', name: 'app_inbound_trailer_temp_log')]
     public function inboundTrailerTempLog(EntityManagerInterface $entityManager): Response
     {

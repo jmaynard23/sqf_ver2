@@ -329,7 +329,7 @@ class ShippingLog
 
     public function getTimeLoaded()
     {
-        return $this->time_loaded->format('H:i');
+        return $this->time_loaded;
     }
 
     public function setTimeLoaded(?\DateTimeInterface $time_loaded): self

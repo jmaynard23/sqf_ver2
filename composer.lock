@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "f8469993ba2f29294e0fccf2ffa6a900",
+    "content-hash": "22419b8fb1d82e57277faa701bb5437c",
     "packages": [
         {
             "name": "doctrine/cache",
@@ -2899,16 +2899,16 @@
         },
         {
             "name": "symfony/form",
-            "version": "v6.3.6",
+            "version": "v6.3.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/form.git",
-                "reference": "6af3c25eda0f2a028aeab7d81c2597dfedecd96a"
+                "reference": "e6743d188f168643cb247f65cbad09ddb1dfcfe5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/form/zipball/6af3c25eda0f2a028aeab7d81c2597dfedecd96a",
-                "reference": "6af3c25eda0f2a028aeab7d81c2597dfedecd96a",
+                "url": "https://api.github.com/repos/symfony/form/zipball/e6743d188f168643cb247f65cbad09ddb1dfcfe5",
+                "reference": "e6743d188f168643cb247f65cbad09ddb1dfcfe5",
                 "shasum": ""
             },
             "require": {
@@ -2976,7 +2976,7 @@
             "description": "Allows to easily create, process and reuse HTML forms",
             "homepage": "https://symfony.com",
             "support": {
-                "source": "https://github.com/symfony/form/tree/v6.3.6"
+                "source": "https://github.com/symfony/form/tree/v6.3.7"
             },
             "funding": [
                 {
@@ -2992,7 +2992,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2023-10-17T11:32:53+00:00"
+            "time": "2023-10-28T23:11:45+00:00"
         },
         {
             "name": "symfony/framework-bundle",
@@ -5556,16 +5556,16 @@
         },
         {
             "name": "symfony/validator",
-            "version": "v6.3.6",
+            "version": "v6.3.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/validator.git",
-                "reference": "254290aa13d591883eb36327cbe80689cee38ffb"
+                "reference": "9cc736663fa5839b9710ac2c303bb0b951014fc1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/validator/zipball/254290aa13d591883eb36327cbe80689cee38ffb",
-                "reference": "254290aa13d591883eb36327cbe80689cee38ffb",
+                "url": "https://api.github.com/repos/symfony/validator/zipball/9cc736663fa5839b9710ac2c303bb0b951014fc1",
+                "reference": "9cc736663fa5839b9710ac2c303bb0b951014fc1",
                 "shasum": ""
             },
             "require": {
@@ -5632,7 +5632,7 @@
             "description": "Provides tools to validate values",
             "homepage": "https://symfony.com",
             "support": {
-                "source": "https://github.com/symfony/validator/tree/v6.3.6"
+                "source": "https://github.com/symfony/validator/tree/v6.3.7"
             },
             "funding": [
                 {
@@ -5648,7 +5648,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2023-10-20T16:20:17+00:00"
+            "time": "2023-10-28T23:11:45+00:00"
         },
         {
             "name": "symfony/var-dumper",
