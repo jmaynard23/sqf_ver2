@@ -8,8 +8,8 @@
         <span>hidden</span>
     </div>
     <div class="buffer" style="padding: 15px; color: white">
-        <h1>Jesse Maynard -- Admin</h1>
-        <h3>Email: jmaynard@brownfoodservice.com</h3>
+        <h1>{{ app.user.firstName }} {{ app.user.lastName }}</h1>
+        <h3>Email: {{ app.user.email }}</h3>
     </div>
 
     <nav class="buffer" style="margin-top: 15px; background: #2C3034">
@@ -20,6 +20,7 @@
 
             <a href="{{ path('admin') }}" class="btn btn-dark btn-lg me-3">Admin Panel</a>
 
+            <a href="{{ path('app_logout') }}" class="btn btn-dark btn-lg me-3">Logout</a>
 {#            <div {{ stimulus_controller('modal-form') }}>#}
 {#                <button class="btn btn-dark btn-lg me-3">Logout</button>#}
 {#            </div>#}

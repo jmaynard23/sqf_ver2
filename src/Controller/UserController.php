@@ -13,4 +13,10 @@ class UserController extends AbstractController
     {
         return $this->render('sqf/user_profile.html.twig');
     }
+
+    #[Route('/logout', name: 'app_logout', methods: ['GET'])]
+    public function logout(): never
+    {
+        throw new \Exception('Broken');
+    }
 }

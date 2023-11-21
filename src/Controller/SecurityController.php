@@ -70,4 +70,5 @@ class SecurityController extends AbstractController
 
         return $this->render('sqf/report_freezer_cooler.html.twig', ['coolers' => $coolers]);
     }
+
 }
