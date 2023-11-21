@@ -1,25 +1,95 @@
-{% extends 'base.html.twig' %}
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{% block title %}Register{% endblock %}</title>
 
-{% block title %}Register{% endblock %}
+    {% block stylesheets %}
+        {{ encore_entry_link_tags('app') }}
+    {% endblock %}
 
+    {% block javascripts %}
+        {{ encore_entry_script_tags('app') }}
+    {% endblock %}
+
+    {% block script %}
+    {% endblock %}
+</head>
 {% block body %}
-    <div style="visibility: hidden"><span>Hidden</span></div>
-<div class="buffer form-control">
-    <h1>Register</h1>
 
-    {{ form_errors(registrationForm) }}
+{#    <div style="visibility: hidden"><span>Hidden</span></div>#}
+{#<div class="buffer form-control">#}
+{#    <h1>Register</h1>#}
 
-    {{ form_start(registrationForm) }}
-        {{ form_row(registrationForm.email) }}
-        {{ form_row(registrationForm.first_name) }}
-        {{ form_row(registrationForm.last_name) }}
-        {{ form_row(registrationForm.employee_id) }}
-        {{ form_row(registrationForm.plainPassword, {
-            label: 'Password'
-        }) }}
-        {{ form_row(registrationForm.agreeTerms) }}
+{#    {{ form_errors(registrationForm) }}#}
 
-        <button type="submit" class="btn btn-primary">Register</button>
-    {{ form_end(registrationForm) }}
-</div>
+{#    {{ form_start(registrationForm) }}#}
+{#        {{ form_row(registrationForm.email) }}#}
+{#        {{ form_row(registrationForm.first_name) }}#}
+{#        {{ form_row(registrationForm.last_name) }}#}
+{#        {{ form_row(registrationForm.employee_id) }}#}
+{#        {{ form_row(registrationForm.plainPassword, {#}
+{#            label: 'Password'#}
+{#        }) }}#}
+{#        {{ form_row(registrationForm.agreeTerms) }}#}
+
+{#        <button type="submit" class="btn btn-primary">Register</button>#}
+{#    {{ form_end(registrationForm) }}#}
+{#</div>#}
+
+    <section class="h-100" style="background-color: #2C3034">
+        <div class="container py-5 h-100">
+            <div class="row d-flex justify-content-center align-items-center h-100">
+                <div class="col-lg-5">
+                    <div class="card rounded-3 text-black">
+                        <div class="row">
+                            <div class="">
+                                <div class="card-body p-md-5 mx-md-4">
+
+                                    <div class="text-center">
+                                        <h2 class="mt-1 mb-5 pb-1">Register</h2>
+                                    </div>
+
+                                    {{ form_errors(registrationForm) }}
+
+                                    {{ form_start(registrationForm) }}
+                                        <div class="mb-4 form-control form-label">
+                                            {{ form_row(registrationForm.email) }}
+                                        </div>
+                                    <div class="mb-4 form-control form-label">
+                                        {{ form_row(registrationForm.first_name) }}
+                                    </div>
+                                    <div class="mb-4 form-control form-label">
+                                        {{ form_row(registrationForm.last_name) }}
+                                    </div>
+                                    <div class="mb-4 form-control form-label">
+                                        {{ form_row(registrationForm.employee_id) }}
+                                    </div>
+                                    <div class="mb-4 form-control form-label">
+                                        {{ form_row(registrationForm.plainPassword, {label: 'Password'}) }}
+                                    </div>
+                                    <div class="mb-4 form-control form-label">
+                                        {{ form_row(registrationForm.agreeTerms) }}
+                                    </div>
+                                        <div class="row">
+                                            <div class="text-center col-sm-3">
+                                                <button class="btn btn-primary mb-3" type="submit">Register</button>
+                                            </div>
+                                        </div>
+                                    {{ form_end(registrationForm) }}
+
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+
 {% endblock %}
